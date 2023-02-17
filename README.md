@@ -1,3 +1,4 @@
+<div align="center">    
 # Dirichlet-based Uncertainty Calibration for Active Domain Adaptation
 
 [arxiv地址！！！Dirichlet-based Uncertainty Calibration for Active Domain Adaptation](https://arxiv.org/abs/). **ICLR 2023 Spotlight**.
@@ -9,6 +10,7 @@
 [![Bilibili](https://img.shields.io/badge/Video-Bilibili-%2300A1D6?logo=bilibili&style=flat-square)](https://www.bilibili.com/video/av692744964)&nbsp;&nbsp;
 [![Dropbox](https://img.shields.io/badge/Poster-Dropbox-%230061FF?logo=dropbox&style=flat-square)](https://www.dropbox.com/s/pvb2701k2gr9cfb/aaai23poster.pdf?dl=0)&nbsp;&nbsp;
 
+</div>
 <!-- TOC -->
 
 - [Dirichlet-based Uncertainty Calibration for Active Domain Adaptation](#dirichlet-based-uncertainty-calibration-for-active-domain-adaptation)
