@@ -2,7 +2,7 @@
   
 # Dirichlet-based Uncertainty Calibration for Active Domain Adaptation
 
-[arxiv地址！！！Dirichlet-based Uncertainty Calibration for Active Domain Adaptation](https://arxiv.org/abs/). **ICLR 2023 Spotlight**.
+[arxiv地址！！！Dirichlet-based Uncertainty Calibration for Active Domain Adaptation](https://arxiv.org/abs/). **[ICLR 2023 Spotlight]**.
 
 **by [Mixue Xie](https://scholar.google.com/citations?user=2NHj3GsAAAAJ&hl=zh-CN&oi=ao), [Shuang Li](https://shuangli.xyz), [Rui Zhang](https://scholar.google.com/citations?user=8QbRVCsAAAAJ&hl=en) and [Chi Harold Liu](https://scholar.google.com/citations?user=3IgFTEkAAAAJ&hl=en)**
 
@@ -188,7 +188,7 @@ This project is based on the following open-source projects. We thank their auth
 If you find this work helpful to your research, please consider citing the paper:
 
 ```bibtex
-@inproceedings{li2023vblc,
+@inproceedings{xie2023DUC,
   title={Dirichlet-based Uncertainty Calibration for Active Domain Adaptation},
   author={Xie, Mixue and Li, Shuang and Zhang, Rui and Liu, Chi Harold},
   booktitle={International Conference on Learning Representations (ICLR)},
