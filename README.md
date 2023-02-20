@@ -35,11 +35,11 @@ We propose a Dirichlet-based Uncertainty Calibration (DUC) approach for active d
 
 ## Prerequisites Installation
 
-* For cross-domain *image classification* tasks, this code is implemented with `Python 3.6`, `CUDA 11.4` on `NVIDIA GeForce RTX 2080 Ti`. To try out this project, it is recommended to set up a virtual environment first.
+* For cross-domain *image classification* tasks, this code is implemented with `Python 3.7.5`, `CUDA 11.4` on `NVIDIA GeForce RTX 2080 Ti`. To try out this project, it is recommended to set up a virtual environment first.
 
     ```bash
     # Step-by-step installation
-    conda create --name DUC_cls python=3.6
+    conda create --name DUC_cls python=3.7.5
     conda activate DUC_cls
 
     # this installs the right pip and dependencies for the fresh python
@@ -72,6 +72,14 @@ We propose a Dirichlet-based Uncertainty Calibration (DUC) approach for active d
     - Download [VisDA-2017 Dataset](https://github.com/VisionLearningGroup/taskcv-2017-public/tree/master/classification)
     - Download [DomainNet dataset](http://ai.bu.edu/M3SDA/#dataset) and [miniDomainNet's split files](https://github.com/KaiyangZhou/Dassl.pytorch/blob/master/DATASETS.md#miniDomainNet)
 
+    Symlink the required dataset by running
+
+    ```bash
+    ln -s /path_to_home_dataset data/home
+    ln -s /path_to_visda2017_dataset/ data/visda2017
+    ln -s /path_to_domainnet_dataset data/domainnet
+    ```
+
     The data folder should be structured as follows:
     ```
     ├── data/
@@ -83,7 +91,7 @@ We propose a Dirichlet-based Uncertainty Calibration (DUC) approach for active d
     │   ├── visda2017/
     |   |   ├── train/
     |   |   ├── validation/
-    │   ├── DomainNet/	
+    │   ├── domainNet/	
     |   |   ├── clipart/
     |   |   |—— infograph/
     |   |   ├── painting/
