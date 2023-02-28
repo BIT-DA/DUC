@@ -2,14 +2,12 @@
   
 # Dirichlet-based Uncertainty Calibration for Active Domain Adaptation
 
-[arxiv地址！！！Dirichlet-based Uncertainty Calibration for Active Domain Adaptation](https://arxiv.org/abs/). **[ICLR 2023 Spotlight]**.
+[Dirichlet-based Uncertainty Calibration for Active Domain Adaptation](https://arxiv.org/abs/2302.13824). **[ICLR 2023 Spotlight]**.
 
-**by [Mixue Xie](https://scholar.google.com/citations?user=2NHj3GsAAAAJ&hl=zh-CN&oi=ao), [Shuang Li](https://shuangli.xyz), [Rui Zhang](https://scholar.google.com/citations?user=8QbRVCsAAAAJ&hl=en) and [Chi Harold Liu](https://scholar.google.com/citations?user=3IgFTEkAAAAJ&hl=en)**
+**by [Mixue Xie](https://scholar.google.com/citations?user=2NHj3GsAAAAJ&hl=zh-CN&oi=ao), [Shuang Li](https://shuangli.xyz), Rui Zhang and [Chi Harold Liu](https://scholar.google.com/citations?user=3IgFTEkAAAAJ&hl=en)**
 
-[![Project Page](https://img.shields.io/badge/Project%20Page-%23D80082?logo=&style=flat-square)](https://kiwixr.github.io/projects/vblc)&nbsp;&nbsp;
-[![arXiv](https://img.shields.io/badge/Paper-arXiv-%23B31B1B?style=flat-square)](https://arxiv.org/abs/2211.12256)&nbsp;&nbsp;
-[![Bilibili](https://img.shields.io/badge/Video-Bilibili-%2300A1D6?logo=bilibili&style=flat-square)](https://www.bilibili.com/video/av692744964)&nbsp;&nbsp;
-[![Dropbox](https://img.shields.io/badge/Poster-Dropbox-%230061FF?logo=dropbox&style=flat-square)](https://www.dropbox.com/s/pvb2701k2gr9cfb/aaai23poster.pdf?dl=0)&nbsp;&nbsp;
+[![arXiv](https://img.shields.io/badge/Paper-arXiv-%23B31B1B?style=flat-square)](https://arxiv.org/abs/2302.13824)&nbsp;&nbsp;
+
 
 </div>
 <!-- TOC -->
@@ -19,7 +17,6 @@
     - [Prerequisites Installation](#prerequisites-installation)
     - [Datasets Preparation](#datasets-preparation)
     - [Code Running](#code-running)
-        - [Training](#training)
         - [Testing](#testing)
     - [Acknowledgments](#acknowledgments)
     - [Citation](#citation)
@@ -49,18 +46,17 @@ We propose a Dirichlet-based Uncertainty Calibration (DUC) approach for active d
     pip install -r requirements_cls.txt
     ```
 
-* For cross-domain *semantic segmentation* tasks, this code is implemented with `Python 3.7`, `CUDA 11.2` on `GeForce RTX 3090`. To try out this project, it is recommended to set up a virtual environment first.
+* For cross-domain *semantic segmentation* tasks, this code is implemented with `Python 3.7.5`, `CUDA 11.2` on `NVIDIA GeForce RTX 3090`. To try out this project, it is recommended to set up a virtual environment first.
 
     ```bash
     # Step-by-step installation
-    conda create --name DUC_seg python=3.7
+    conda create --name DUC_seg python=3.7.5
     conda activate DUC_seg
 
     # this installs the right pip and dependencies for the fresh python
     conda install -y ipython pip
 
     # this installs required packages
-    python3 -m pip install torch==1.7.0+cu110 torchvision==0.8.1+cu110 torchaudio===0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
     pip install -r requirements_seg.txt
     ```
 
@@ -77,7 +73,7 @@ We propose a Dirichlet-based Uncertainty Calibration (DUC) approach for active d
 
     ```bash
     ln -s /path_to_home_dataset data/home
-    ln -s /path_to_visda2017_dataset/ data/visda2017
+    ln -s /path_to_visda2017_dataset data/visda2017
     ln -s /path_to_domainnet_dataset data/domainnet
     ```
 
@@ -92,7 +88,7 @@ We propose a Dirichlet-based Uncertainty Calibration (DUC) approach for active d
     │   ├── visda2017/
     |   |   ├── train/
     |   |   ├── validation/
-    │   ├── domainNet/	
+    │   ├── domainnet/	
     |   |   ├── clipart/
     |   |   |—— infograph/
     |   |   ├── painting/
@@ -142,34 +138,21 @@ We propose a Dirichlet-based Uncertainty Calibration (DUC) approach for active d
 
 ## Code Running
 
-### Training
+* Cross-domain image classification:
 
-Cross-domain image classification:
-```bash
-# training for Office-Home
-python main.py --cfg configs/home.yaml
+    ```bash
+    # running for cross-domain image classification:
+    sh train_script.sh
+    ```
 
-# training for VisDA-2017
-python main.py --cfg configs/visda.yaml
+* Cross-domain semantic segmentation:
+    ```bash
+    # running for GTAV to Cityscapes
+    sh script_seg_gtav.sh
 
-# training for miniDomainNet
-python main.py --cfg configs/miniDomainNet.yaml
-```
-
-Cross-domain semantic segmentation:
-```bash
-# training for GTAV to Cityscapes, DeepLab-v2
-CUDA_VISIBLE_DEVICES=1 python3 main_seg.py --cfg configs/deeplabv2_r101_pixel_syn.yaml
-
-# training for GTAV to Cityscapes, DeepLab-v3+
-CUDA_VISIBLE_DEVICES=1 python3 main_seg.py --cfg configs/deeplabv2_r101_pixel_syn.yaml
-
-# training for SYNTHIA to Cityscapes, DeepLab-v2
-CUDA_VISIBLE_DEVICES=1 python3 main_seg.py --cfg configs/deeplabv2_r101_pixel_syn.yaml
-
-# training for SYNTHIA to Cityscapes, DeepLab-v3+
-CUDA_VISIBLE_DEVICES=1 python3 main_seg.py --cfg configs/deeplabv2_r101_pixel_syn.yaml
-```
+    # running for SYNTHIA to Cityscapes
+    script_seg_syn.sh
+    ```
 
 ### Testing
 
