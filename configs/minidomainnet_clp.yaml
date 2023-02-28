@@ -1,0 +1,39 @@
+OUTPUT_DIR: 'results/'
+
+INPUT:
+  SIZE: (256, 256)
+  CROP_SIZE: (224, 224)
+  SOURCE_TRANSFORMS: ('random_flip', 'random_resized_crop', 'normalize', 'colorjitter')
+  TARGET_TRANSFORMS: ('random_flip', 'random_resized_crop', 'normalize')
+  TEST_TRANSFORMS: ('center_crop', 'normalize')
+  PIXEL_MEAN: [0.485, 0.456, 0.406]
+  PIXEL_STD: [0.229, 0.224, 0.225]
+
+DATASET:
+  ROOT: 'data/list/'
+  NAME: 'minidomainnet'
+  SOURCE_DOMAINS: ['clipart']
+  TARGET_DOMAINS: ['clipart', 'painting', 'real', 'Sketch']
+  NUM_CLASS: 126
+
+DATALOADER:
+  SOURCE:
+    BATCH_SIZE: 32
+  TARGET:
+    BATCH_SIZE: 32
+  TEST:
+    BATCH_SIZE: 32
+
+TRAIN:
+  PRINT_FREQ: 500
+OPTIM:
+  NAME: 'SGD'
+  LR: 0.1
+
+TRAINER:
+  NAME: 'DUC'
+  MAX_EPOCHS: 50
+  BETA: 1.0
+
+SEED: 0  # 0,1,2,3,4 for five random experiments
+GPU_ID: 0
