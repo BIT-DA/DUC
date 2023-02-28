@@ -1,8 +1,8 @@
 <div align="center">  
   
-# Dirichlet-based Uncertainty Calibration for Active Domain Adaptation
+# Dirichlet-based Uncertainty Calibration for Active Domain Adaptation [ICLR 2023 Spotlight]
 
-**by [Mixue Xie](https://scholar.google.com/citations?user=2NHj3GsAAAAJ&hl=zh-CN&oi=ao), [Shuang Li](https://shuangli.xyz), Rui Zhang and [Chi Harold Liu](https://scholar.google.com/citations?user=3IgFTEkAAAAJ&hl=en)** **[ICLR 2023 Spotlight]**
+**by [Mixue Xie](https://scholar.google.com/citations?user=2NHj3GsAAAAJ&hl=zh-CN&oi=ao), [Shuang Li](https://shuangli.xyz), Rui Zhang and [Chi Harold Liu](https://scholar.google.com/citations?user=3IgFTEkAAAAJ&hl=en)**
 
 [![arXiv](https://img.shields.io/badge/Paper-arXiv-%23B31B1B?style=flat-square)](https://arxiv.org/abs/2302.13824)&nbsp;&nbsp;
 
@@ -10,7 +10,7 @@
 </div>
 <!-- TOC -->
 
-- [Dirichlet-based Uncertainty Calibration for Active Domain Adaptation](#dirichlet-based-uncertainty-calibration-for-active-domain-adaptation)
+- [Dirichlet-based Uncertainty Calibration for Active Domain Adaptation [ICLR 2023 Spotlight]](#dirichlet-based-uncertainty-calibration-for-active-domain-adaptation-iclr-2023-spotlight)
     - [Overview](#overview)
     - [Prerequisites Installation](#prerequisites-installation)
     - [Datasets Preparation](#datasets-preparation)
