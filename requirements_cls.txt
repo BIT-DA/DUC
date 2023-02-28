@@ -2,3 +2,4 @@ torch==1.7.0
 torchvision==0.8.1
 Pillow==8.4.0
 numpy
+yacs
