@@ -2,9 +2,7 @@
   
 # Dirichlet-based Uncertainty Calibration for Active Domain Adaptation
 
-[Dirichlet-based Uncertainty Calibration for Active Domain Adaptation](https://arxiv.org/abs/2302.13824). **[ICLR 2023 Spotlight]**.
-
-**by [Mixue Xie](https://scholar.google.com/citations?user=2NHj3GsAAAAJ&hl=zh-CN&oi=ao), [Shuang Li](https://shuangli.xyz), Rui Zhang and [Chi Harold Liu](https://scholar.google.com/citations?user=3IgFTEkAAAAJ&hl=en)**
+**by [Mixue Xie](https://scholar.google.com/citations?user=2NHj3GsAAAAJ&hl=zh-CN&oi=ao), [Shuang Li](https://shuangli.xyz), Rui Zhang and [Chi Harold Liu](https://scholar.google.com/citations?user=3IgFTEkAAAAJ&hl=en)****[ICLR 2023 Spotlight]**
 
 [![arXiv](https://img.shields.io/badge/Paper-arXiv-%23B31B1B?style=flat-square)](https://arxiv.org/abs/2302.13824)&nbsp;&nbsp;
 
