@@ -55,7 +55,7 @@ We propose a Dirichlet-based Uncertainty Calibration (DUC) approach for active d
     conda install -y ipython pip
 
     # this installs required packages
-    pip install torch==1.7.0+cu110 torchvision==0.8.1+cu110 torchaudio===0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
+    python3 -m pip install torch==1.7.0+cu110 torchvision==0.8.1+cu110 torchaudio===0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
     pip install -r requirements_seg.txt
     ```
 
@@ -137,14 +137,14 @@ We propose a Dirichlet-based Uncertainty Calibration (DUC) approach for active d
 
 ## Code Running
 
-* Cross-domain image classification:
+* for cross-domain image classification:
 
     ```bash
     # running for cross-domain image classification:
     sh train_script.sh
     ```
 
-* Cross-domain semantic segmentation:
+* for cross-domain semantic segmentation:
     ```bash
     # running for GTAV to Cityscapes
     sh script_seg_gtav.sh
