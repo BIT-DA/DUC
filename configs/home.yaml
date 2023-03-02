@@ -35,5 +35,5 @@ TRAINER:
   MAX_EPOCHS: 50
   BETA: 1.0
 
-SEED: 0  # 0,1,2,3,4 for five random experiments
+SEED: 0
 GPU_ID: 0
