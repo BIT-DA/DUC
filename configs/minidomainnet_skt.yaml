@@ -28,12 +28,13 @@ TRAIN:
   PRINT_FREQ: 500
 OPTIM:
   NAME: 'SGD'
-  LR: 0.1
+  LR: 0.002
 
 TRAINER:
   NAME: 'DUC'
   MAX_EPOCHS: 50
   BETA: 1.0
+  LAMBDA: 0.05
 
-SEED: 0  # 0,1,2,3,4 for five random experiments
+SEED: 2
 GPU_ID: 0
