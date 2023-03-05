@@ -1,6 +1,6 @@
 <div align="center">  
   
-# Dirichlet-based Uncertainty Calibration for Active Domain Adaptation [ICLR 2023 Spotlight]
+**Dirichlet-based Uncertainty Calibration for Active Domain Adaptation [ICLR 2023 Spotlight]**
 
 **by [Mixue Xie](https://scholar.google.com/citations?user=2NHj3GsAAAAJ&hl=zh-CN&oi=ao), [Shuang Li](https://shuangli.xyz), Rui Zhang and [Chi Harold Liu](https://scholar.google.com/citations?user=3IgFTEkAAAAJ&hl=en)**
 
@@ -10,15 +10,13 @@
 </div>
 <!-- TOC -->
 
-- [Dirichlet-based Uncertainty Calibration for Active Domain Adaptation [ICLR 2023 Spotlight]](#dirichlet-based-uncertainty-calibration-for-active-domain-adaptation-iclr-2023-spotlight)
-    - [Overview](#overview)
-    - [Prerequisites Installation](#prerequisites-installation)
-    - [Datasets Preparation](#datasets-preparation)
-    - [Code Running](#code-running)
-        - [Testing](#testing)
-    - [Acknowledgments](#acknowledgments)
-    - [Citation](#citation)
-    - [Contact](#contact)
+- [Overview](#overview)
+- [Prerequisites Installation](#prerequisites-installation)
+- [Datasets Preparation](#datasets-preparation)
+- [Code Running](#code-running)
+- [Acknowledgments](#acknowledgments)
+- [Citation](#citation)
+- [Contact](#contact)
 
 <!-- /TOC -->
 
@@ -141,29 +139,20 @@ We propose a Dirichlet-based Uncertainty Calibration (DUC) approach for active d
 
     ```bash
     # running for cross-domain image classification:
-    sh train_script.sh
+    sh script_cls.sh
     ```
 
 * for cross-domain semantic segmentation:
     ```bash
+    # go to the directory of semantic segmentation tasks
+    cd ./segmentation
+
     # running for GTAV to Cityscapes
     sh script_seg_gtav.sh
 
     # running for SYNTHIA to Cityscapes
-    script_seg_syn.sh
+    sh script_seg_syn.sh
     ```
-
-### Testing
-
-Cross-domain image classification:
-```bash
-python test.py --cfg configs/home.yaml resume checkpint/v3plus_gtav_ra_5.0_precent/model_last.pth OUTPUT_DIR checkpint/v3plus_gtav_ra_5.0_precent
-```
-
-Cross-domain semantic segmentation:
-```bash
-python test.py -cfg configs/deeplabv2_r101_ours.yaml resume results/r101_g2c_ours
-```
 
 ## Acknowledgments
 
@@ -189,3 +178,4 @@ If you find this work helpful to your research, please consider citing the paper
 
 ## Contact
 If you have any problem about our code, feel free to contact mxxie@bit.edu.cn or describe your problem in Issues.
+
