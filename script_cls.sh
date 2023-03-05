@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Office-Home
-python3 main.py --cfg configs/home.yaml GPU_ID 8 OUTPUT_DIR log TRAINER.BETA 1.0 OPTIM.LR 0.004  TRAINER.LAMBDA 0.05 SEED 2 TRAINER.MAX_EPOCHS 50 TRAINER.KAPPA 10 SAVE False LOG_NAME 'log_lr0004_beta1_lambda005_epoch50_kappa10.txt'
+python3 main.py --cfg configs/home.yaml GPU_ID 8 OUTPUT_DIR log TRAINER.BETA 1.0 OPTIM.LR 0.004  TRAINER.LAMBDA 0.05 SEED 0 TRAINER.MAX_EPOCHS 50 TRAINER.KAPPA 10 SAVE False LOG_NAME 'log_lr0004_beta1_lambda005_epoch50_kappa10.txt'
 
 
 # VisDA-2017
