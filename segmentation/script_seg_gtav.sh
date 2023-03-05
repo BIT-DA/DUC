@@ -15,10 +15,3 @@ CUDA_VISIBLE_DEVICES=0 python3 train_seg.py --cfg configs/deeplabv3_plus_r101_gt
 
 # test for deeplabv3+, GTAV->cityscapes
 CUDA_VISIBLE_DEVICES=0 python3 test_seg.py --cfg configs/deeplabv3_plus_r101_gtav.yaml resume './output/deeplabv3+/gtav' OUTPUT_DIR './output/deeplabv3+/gtav' SOLVER.BATCH_SIZE_VAL 1
-
-
-
-
-
-
-
